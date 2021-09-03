@@ -9,7 +9,7 @@ node(){
         }
         
     stage('Build') {
-            sh 'pm2 start index.js'
+            sh 'npm start'
             echo "Build completed"
         }
         
