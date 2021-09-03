@@ -4,12 +4,13 @@ node(){
     }
         
     stage('Install dependencies') {
+            sh 'pm2 stop all'
             sh 'npm install'
             echo "Modules installed"
         }
         
     stage('Build') {
-            sh 'npm start'
+            sh 'pm2 start index.js'
             echo "Build completed"
         }
         
